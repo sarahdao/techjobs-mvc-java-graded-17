@@ -8,9 +8,9 @@
 
 <div class="container body-content">
 
-  <h1 th:text="${#strings.capitalizeWords(title)}"></h1>
-    <div >
-  <!-- TODO #1 - Use a loop to display job results in a table. -->
+    <h1 th:text="${#strings.capitalizeWords(title)}"></h1>
+    <div th:fragment="job-details-table(job)" >
+        <!-- TODO #1 - Use a loop to display job results in a table. -->
         <table class="table job-listing" th:each="job : ${jobs}">
             <tr>
                 <td>ID:</td>
