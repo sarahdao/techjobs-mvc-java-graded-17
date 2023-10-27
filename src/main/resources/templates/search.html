@@ -37,9 +37,8 @@
     <hr />
 
     <!-- TODO #4 - Loop over the search results to display all job fields. -->
-    <div th:each="job : ${jobs}" class="job-details">
-        <h2 th:text="${job.name}"></h2>
-        <table class="table job-listing">
+    <div>
+        <table class="table job-listing" th:each="job : ${jobs}">
             <tr>
                 <td>ID:</td>
                 <td th:text="${job.id}"></td>
@@ -62,7 +61,6 @@
             </tr>
         </table>
         <hr />
-        <div th:include="~{fragments :: job-details-table(${job})}"></div>
     </div>
 
 
